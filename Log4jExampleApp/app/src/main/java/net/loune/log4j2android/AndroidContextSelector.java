@@ -31,7 +31,7 @@ public class AndroidContextSelector implements ContextSelector {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Configuration config = org.apache.logging.log4j.core.config.xml.XmlConfigurationFactory.getInstance().getConfiguration(source);
+        Configuration config = org.apache.logging.log4j.core.config.xml.XmlConfigurationFactory.getInstance().getConfiguration(context, source);
         context.start(config);
     }
 
